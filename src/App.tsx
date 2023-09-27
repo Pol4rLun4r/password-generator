@@ -1,9 +1,15 @@
+// style
+import Layout from "./components/layout/Layout"
+
+// components
+import CopyPassword from "./components/copyPassword/CopyPassword"
+
 function App() {
 
   return (
-    <>
-      <h1>init</h1>
-    </>
+    <Layout>
+      <CopyPassword/>
+    </Layout>
   )
 }
 
