@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
+import useRandom from "./useRandom";
 
 // style
+import Glitch from "./Glitch";
 import Container from "./style/Container";
 import Content from "./style/Content";
 import CopyIcon from "./style/CopyIcon";
@@ -12,6 +14,8 @@ const CopyPassword = () => {
     const [isCopy, setIsCopy] = useState(false);
 
     const copy = () => {
+        console.log(useRandom({ length: 31, lowercase: true, numbers: true, symbols: true, uppercase: true }));
+
         navigator.clipboard.writeText(password);
         setIsCopy(true);
 
@@ -20,12 +24,12 @@ const CopyPassword = () => {
         }, 1000)
     }
 
-    const password = "CopyPassword"
+    const password = "8d2hda92jd0"
 
     return (
         <Container>
             <Content onClick={() => copy()}>
-                {password}
+                <Glitch Password={password} />
                 <CopyIcon />
             </Content>
 

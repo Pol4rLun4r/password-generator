@@ -8,7 +8,7 @@ const Content = styled.div`
     align-items: center;
     justify-content: space-between;
 
-    padding: 0px 18px 0px 14px;
+    padding: 0px 14px;
 
     border: solid 2px rgba(90, 90, 90, 0.44);
     border-radius: 5px;

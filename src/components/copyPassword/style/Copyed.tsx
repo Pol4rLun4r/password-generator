@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ReactNode } from 'react';
 
 const CopyedStyle = styled(motion.div)`
-    padding: 8px 12px 8px 12px;
+    padding: 8px 12px;
     border-radius: 5px;
 
     background-color: white;

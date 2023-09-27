@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import font from "../assets/fonts/FiraCode-Regular.ttf";
+import font from "../assets/fonts/FiraCodeNerdFontMono-Bold.ttf";
 
 const GlobalStyle = createGlobalStyle`
     @font-face {
