@@ -1,8 +1,19 @@
 import styled, { css } from "styled-components";
+import { device } from "../../../globalStyles/Devices.util";
 
-const styleSize = () =>{
+const styleSize = () => {
     return css`
-        font-size: 13px;
+        @media ${device.mobileS}{
+        font-size: 18px;
+        }
+
+        @media ${device.myMobile}{
+            font-size: 24px;
+        }
+
+        @media ${device.tablet}{
+            font-size: 13px;
+        }
     `
 }
 

@@ -13,7 +13,7 @@ const GeneratePassword = () => {
 
     return (
         <Container onClick={() => handleGenerate()}>
-            Generate Password
+            Password Generate
         </Container>
     )
 }

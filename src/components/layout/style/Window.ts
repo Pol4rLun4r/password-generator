@@ -1,20 +1,35 @@
 import styled from "styled-components";
+import { device } from "../../../globalStyles/Devices.util";
+import { topAndBottom, leftAndRight } from "../../../globalStyles/Sides.util";
 
 const Window = styled.div`
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    padding: 40px 40px;
-
+    justify-content: space-evenly;
     
-    max-width: 500vw;
+    transition: all 0.5s;
     
-    width: 400px;
-    height: auto;
+    @media ${device.mobileS}{
+        width: 100%;
+        height: 100%;
+        padding: ${topAndBottom.mobileS} ${leftAndRight.mobileS};
+    }
 
-    border: 2.5px solid;
-    border-image: linear-gradient(220deg, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 60%, rgba(255, 255, 255, 0.2) 100%) 1;
+    @media ${device.myMobile}{
+        padding: ${topAndBottom.myMobile} ${leftAndRight.myMobile};
+    }
+
+    @media ${device.tablet}{
+        
+        max-width: 500vw;
+        width: 400px;
+        height: auto;
+
+        padding: 40px;
+
+        border: 2.5px solid;
+        border-image: linear-gradient(220deg, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 60%, rgba(255, 255, 255, 0.2) 100%) 1;
+    }
 `
 export default Window;  

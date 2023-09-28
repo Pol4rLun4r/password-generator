@@ -43,7 +43,7 @@ export const DataProvider = ({ children }: IDataProv) => {
     const [uppercase, setUppercase] = useState(false);
     const [number, setNumber] = useState(false);
     const [symbol, setSymbol] = useState(false);
-    const [generatePassword, setGeneratePassword] = useState('Generate Password');
+    const [generatePassword, setGeneratePassword] = useState('Password Generate');
 
     return (
         <DataContext.Provider value={{ length, setLength, lowercase, setLowercase, number, setNumber, uppercase, setUppercase, symbol, setSymbol, generatePassword, setGeneratePassword }}>

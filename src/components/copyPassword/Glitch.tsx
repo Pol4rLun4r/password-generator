@@ -1,4 +1,5 @@
 import GlitchedWriter from "glitched-writer"
+import TextGlitch from "./style/TextGlitch"
 
 interface IPassword {
     Password: string
@@ -13,9 +14,9 @@ const Glitch = ({ Password }: IPassword) => {
     }, 100);
 
     return (
-        <div id="glitch">
-            
-        </div>
+        <TextGlitch>
+            <span id="glitch"></span>
+        </TextGlitch>
     )
 }
 

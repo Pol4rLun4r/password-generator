@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
     body{
         width: 100vw;
         height: 100vh;
-        background-color: red;
+        background-color: #171717;
     }
 
     #root {

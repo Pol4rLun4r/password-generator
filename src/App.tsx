@@ -7,14 +7,24 @@ import Length from "./components/length/Length"
 import Settings from "./components/settings/Settings"
 import GeneratePassword from "./components/generatePassword/GeneratePassword"
 
+// media query
+import { useMediaQuery } from "react-responsive"
+
 function App() {
+  const isMicroDisplay = useMediaQuery({ query: '(max-width: 319px)' })
 
   return (
     <Layout>
-      <CopyPassword />
-      <Length />
-      <Settings />
-      <GeneratePassword/>
+      {isMicroDisplay ?
+        <div>no support for this screen size</div>
+        :
+        <>
+          <CopyPassword />
+          <Length />
+          <Settings />
+          <GeneratePassword />
+        </>
+      }
     </Layout>
   )
 }

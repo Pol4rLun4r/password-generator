@@ -1,15 +1,12 @@
 import styled from "styled-components";
+import { device } from "../../../../globalStyles/Devices.util";
 
 interface IContainer {
     IsIncluide: string
 }
 
 const Container = styled.div`
-    margin-top: ${({ IsIncluide }: IContainer) => IsIncluide === 'lowercase' ? '15px' : '10px'};
-
     width: 100%;
-    height: 50px;
-    padding: 0px 14px;
     background-color: rgba(90, 90, 90, 0.25);
     border-radius: 5px;
 
@@ -18,6 +15,23 @@ const Container = styled.div`
     justify-content: space-between;
 
     text-transform: capitalize;
+
+    @media ${device.mobileS}{
+        margin-top: ${({ IsIncluide }: IContainer) => IsIncluide === 'lowercase' ? '15px' : '10px'};
+        height: 55px;
+        padding: 0px 8px;
+    }
+
+    @media ${device.myMobile}{
+        margin-top: ${({ IsIncluide }: IContainer) => IsIncluide === 'lowercase' ? '15px' : '20px'};
+        height: 70px;
+        padding: 0px 14px;
+    }
+
+    @media ${device.tablet}{
+        margin-top: ${({ IsIncluide }: IContainer) => IsIncluide === 'lowercase' ? '15px' : '10px'};
+        height: 50px;
+    }
 `
 
 export default Container;

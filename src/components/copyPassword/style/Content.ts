@@ -1,9 +1,7 @@
 import styled from "styled-components";
+import { device } from "../../../globalStyles/Devices.util";
 
 const Content = styled.div`
-    width: 100%;
-    height: 50px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -14,6 +12,16 @@ const Content = styled.div`
     border-radius: 5px;
 
     cursor: pointer;
+
+    @media ${device.mobileS}{
+        width: 100%;
+        height: 70px;
+    }
+
+    @media ${device.tablet}{
+        width: 100%;
+        height: 50px;
+    }
 `
 
 export default Content;
