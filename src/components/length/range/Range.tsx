@@ -1,4 +1,4 @@
-import { useRef} from "react";
+import { useRef } from "react";
 import useData from "../../../hooks/useData";
 
 // style
@@ -9,14 +9,14 @@ const Range = () => {
 
   const RangeValue = useRef<HTMLInputElement>();
 
-  const test = () => {
+  const getValue = () => {
     // @ts-ignore
     setLength(RangeValue.current?.value);
   }
 
   return (
     // @ts-ignore
-    <StyleRange ref={RangeValue} onChange={() => test()} />
+    < StyleRange ref={RangeValue} onChange={() => getValue()} />
   )
 }
 

@@ -14,7 +14,6 @@ const Content = styled.div`
     border-radius: 5px;
 
     cursor: pointer;
-    user-select: none;
 `
 
 export default Content;

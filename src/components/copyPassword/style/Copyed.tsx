@@ -9,7 +9,6 @@ const CopyedStyle = styled(motion.div)`
     background-color: white;
     color: black;
     font-size: 13px;
-    user-select: none;
 
     position: absolute;
     bottom: -40px;

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import useRandom from "./useRandom";
 
 // style
 import Glitch from "./Glitch";
@@ -9,22 +8,25 @@ import Content from "./style/Content";
 import CopyIcon from "./style/CopyIcon";
 import Copyed from "./style/Copyed";
 
+//context
+import useData from "../../hooks/useData";
+
 const CopyPassword = () => {
+    const { generatePassword } = useData();
 
     const [isCopy, setIsCopy] = useState(false);
 
     const copy = () => {
-        console.log(useRandom({ length: 31, lowercase: true, numbers: true, symbols: true, uppercase: true }));
-
-        navigator.clipboard.writeText(password);
         setIsCopy(true);
-
+        
+        navigator.clipboard.writeText(password);
+        
         setTimeout(() => {
             setIsCopy(false)
         }, 1000)
     }
 
-    const password = "8d2hda92jd0"
+    const password = generatePassword;
 
     return (
         <Container>

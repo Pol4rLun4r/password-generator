@@ -27,4 +27,4 @@ const Length = () => {
   )
 }
 
-export default Length
+export default Length;

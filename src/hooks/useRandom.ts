@@ -1,12 +1,14 @@
 interface IUseRandom {
-    length: number
+    length: string
     uppercase: boolean
     lowercase: boolean
-    numbers: boolean
-    symbols: boolean
+    number: boolean
+    symbol: boolean
 }
 
-const useRandom = ({ length, lowercase, numbers, symbols, uppercase }: IUseRandom) => {
+const useRandom = ({ length, lowercase, number, symbol, uppercase }: IUseRandom) => {
+    const convertLength = parseInt(length);
+
     let characters = '';
 
     if (lowercase) {
@@ -17,22 +19,24 @@ const useRandom = ({ length, lowercase, numbers, symbols, uppercase }: IUseRando
         characters += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     }
 
-    if (numbers) {
+    if (number) {
         characters += '1234567890'
     }
 
-    if (symbols) {
+    if (symbol) {
         characters += '!@#$%^&*'
     }
 
 
     let passwordArray = <string[]>[];
 
-    while (passwordArray.length < length) {
+    while (passwordArray.length < convertLength) {
         const character = characters[Math.floor(Math.random() * characters.length)];
 
         passwordArray.push(character);
     }
+
+    if(passwordArray.join('') === '') return 'Enable Settings'
 
     return passwordArray.join('');
 }

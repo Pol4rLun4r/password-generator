@@ -14,8 +14,9 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'defaultFont';
 
         color: white;
-    }
 
+        user-select: none;
+    }
 
     body{
         width: 100vw;
