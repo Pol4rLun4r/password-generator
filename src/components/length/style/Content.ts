@@ -17,6 +17,10 @@ const Content = styled.div`
 
     @media ${device.mobileS}{
         height: 55px;
+
+        div{
+            font-size: 24px;
+        }
     }
 
     @media ${device.myMobile}{
@@ -25,10 +29,10 @@ const Content = styled.div`
     
     @media ${device.tablet}{
         height: 50px;
-    }
 
-    div{
-        font-size: 24px;
+        div{
+            font-size: 18px;
+        }
     }
 `
 
